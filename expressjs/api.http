@@ -5,3 +5,14 @@ GET http://localhost:4000/json
 
 ### 
 GET http://localhost:4000/
+
+### 
+POST http://localhost:4000/
+
+###  need to add new line after content type
+PUT http://localhost:4000/
+Content-Type: application/json
+
+{
+    "title":"Our new title 10"
+}
