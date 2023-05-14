@@ -1,0 +1,196 @@
+In App,jsx wrote our own program to print hello:
+function App(){
+  return (
+    <div>
+      <p>Hello</p>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+function App(){
+  return (
+    <div>
+        <div>
+          <h4>About Me</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis harum dolore minima unde, sed libero eligendi maxime distinctio nostrum ab hic doloremque amet voluptatum placeat pariatur ad fugiat vel?</p>
+        </div>
+        <div>
+          <h4>Education</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum voluptatem quia repellat repudiandae accusantium omnis sequi in assumenda ipsum veniam ex quam nisi officia ad rem dolorem iste, excepturi inventore.</p>
+        </div>
+        <div>
+          <h4>Professional Experience: </h4>
+          <ul>
+              <li>Company xyz</li>
+              <li>Company abc</li>
+              <li>Company fgh</li>
+          </ul>
+        </div>
+        <div>
+          <form action="">
+              <label for="">Name: </label>
+              <input type="text"/><br/>
+              <label for="">Message: </label>
+              <input type="text"/><br/>
+          </form>
+        </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+function AboutMe(){
+  return(
+    <div>
+      <h4>About Me</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis harum dolore minima unde, sed libero eligendi maxime distinctio nostrum ab hic doloremque amet voluptatum placeat pariatur ad fugiat vel?</p>
+
+  </div>
+  );
+}
+function Education(){
+  return(
+    <div>
+      <h4>Education</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis harum dolore minima unde, sed libero eligendi maxime distinctio nostrum ab hic doloremque amet voluptatum placeat pariatur ad fugiat vel?</p>
+  </div>
+  );
+}
+function ProfessionalExperience(){
+  return(
+    <div>
+      <h4>Professional Experience</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis harum dolore minima unde, sed libero eligendi maxime distinctio nostrum ab hic doloremque amet voluptatum placeat pariatur ad fugiat vel?</p>
+  </div>
+  );
+}
+function ContactMe(){
+  return(
+    <div>
+      <form action="">
+          <label for="">Name: </label>
+          <input type="text"/><br/>
+          <label for="">Message: </label>
+          <input type="text"/><br/>
+      </form>
+    </div>
+  );
+}
+function App(){
+  return (
+    <div>
+        <AboutMe/>
+        <Education/>
+        <ProfessionalExperience/>
+        <ContactMe/>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { ContactMe } from "./ContactMe";
+import { AboutMe } from "./AboutMe";
+
+
+
+function App(){
+  return (
+    <div>
+        <AboutMe/>
+        <ContactMe/>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+export function ContactMe(){
+    return(
+      <div>
+        <form action="">
+            <label for="">Name: </label>
+            <input type="text"/><br/>
+            <label for="">Message: </label>
+            <input type="text"/><br/>
+        </form>
+      </div>
+    );
+  }
+  
+  
+export function AboutMe(){
+    return(
+      <div>
+        <h4>About Me</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis harum dolore minima unde, sed libero eligendi maxime distinctio nostrum ab hic doloremque amet voluptatum placeat pariatur ad fugiat vel?</p>
+  
+    </div>
+    );
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+import React from "react";
+
+function App(){
+  // let counter = 0;
+  let [counter,setCounter] = React.useState(1000);
+  const handleClick = () => {
+    // counter +=1 ;
+    setCounter(counter+1);
+    console.log('Counter : ',counter);
+  }; 
+  return (
+    <div>
+      <p>{ counter }</p>
+      <button onClick={handleClick}>Add One</button>
+    </div>
+  );
+}
+
+export default App;

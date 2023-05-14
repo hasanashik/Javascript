@@ -1,0 +1,7 @@
+GET http://localhost:4000/html
+
+### another endpoint
+GET http://localhost:4000/json
+
+### 
+GET http://localhost:4000/
